@@ -1,4 +1,5 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    scene.setBackgroundColor(2)
     if (BrowserOpened == false) {
         web.open("https://makecode.com/")
     }
