@@ -1,4 +1,5 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    scene.setBackgroundColor(9)
     web.open("https://www.google.com/")
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
