@@ -1,6 +1,10 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    web.open("https://makecode.com/")
+    if (BrowserOpened == false) {
+        web.open("https://makecode.com/")
+    }
+    BrowserOpened = true
 })
+let BrowserOpened = false
 let ME = sprites.create(img`
     5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
     5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
@@ -39,3 +43,4 @@ let You = sprites.create(img`
     `, SpriteKind.Enemy)
 You.setPosition(127, 61)
 controller.moveSprite(ME)
+BrowserOpened = false
